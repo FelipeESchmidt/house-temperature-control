@@ -1,0 +1,36 @@
+LINK BANCO DE DADOS FIREBASE
+
+    - Criar um Realtime Database no Firebase
+    - pegar link do banco e alterar nos seguintes arquivos:
+        - app/subscribe.php         LINHA 57
+        - Site/js/sensores.js       LINHA 12
+        - Site/pages/js/sensor.js   LINHA 13
+
+
+MÁQUINA VIRTUAL E DOCKER
+
+    - Criar uma pasta em uma máquina com docker instalado.
+    - Copiar os seguintes arquivos para dentro desta nova pasta.
+        - app/ (pasta app completa)
+        - Dockerfile
+        - docker-compose.yml
+    - Rodar a aplicação de subscribe em PHP
+        - docker-compose up -d
+    - Acessar aplicação
+        - curl http://localhost:80
+
+    *(
+        - Parar aplicação
+            - docker-compose stop
+            - docker-compose down
+    )*
+
+
+PUBLISH PHP NO MOSQUITTO
+
+    - rodar o arquivo publish.php
+
+
+SITE COM TEMPERATURAS
+
+    - abrir site pelo index.html na pasta "Site"

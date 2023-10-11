@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+.local{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 8px 0px #000;
+}
+
+.background-arrange{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+
+#quarto1{
+    background-image: url('https://wallpaperland.com.br/wp-content/uploads/2017/03/3-1.jpg');
+}
+
+#quarto2{
+    background-image: url('https://wallpaperland.com.br/wp-content/uploads/2017/03/3-1.jpg');
+}
+
+#sala{
+    background-image: url('https://www.lopes.com.br/blog/wp-content/uploads/2020/01/papel-de-parede-na-casa-toda-06.jpg');
+}
+
+#cozinha{
+    background-image: url('https://blog.inovepapeisdeparede.com.br/wp-content/uploads/2018/05/Saiba-como-usar-papel-de-parede-na-sua-cozinha-960x480.jpg');
+}
+
+.local h2{
+    font-size: 28px;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 5px rgba(120, 120, 120, 1);
+    color: white;
+}
+
+.local .temperatura{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+}
+
+.local .temperatura .temp_color{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.local .temperatura .temp_color span{
+    font-size: 30px;
+    font-style: bold;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 5px rgba(120, 120, 120, 1);
+    color: white;
+}
+
+.temp_color[temp=temp_0]{
+    background-color: #88888899;
+}
+
+.temp_color[temp=temp_28]{
+    background-color: #43a04799;
+}
+
+.temp_color[temp=temp_29]{
+    background-color: #81c78499;
+}
+
+.temp_color[temp=temp_30]{
+    background-color: #81d4fa99;
+}
+
+.temp_color[temp=temp_31]{
+    background-color: #ffa72699;
+}
+
+.temp_color[temp=temp_32]{
+    background-color: #e5383599;
+}
+
+.temperaturas{
+    margin-top: 50px;
+    width: 100%;
+}
+
+.temperaturas table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    text-shadow: 0px 0px 5px rgba(80, 80, 80, 1);
+}
+
+.temperaturas table th,
+.temperaturas table td{
+    width: 50%;
+    padding: 5px;
+    border: 1px solid #000;
+}
