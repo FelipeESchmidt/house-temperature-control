@@ -1,3 +1,2 @@
 <?php
-    require('subscribe.php');
-?>
+require('subscribe.php');
