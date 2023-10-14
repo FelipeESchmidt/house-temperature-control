@@ -55,7 +55,7 @@ function validateObject($message)
 
 function sendCurl($sensor, $temperature, $date)
 {
-    $url_banco = getUrlBanco();
+    $url_banco = getDatabaseURL();
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
