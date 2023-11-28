@@ -1,18 +1,26 @@
 export const places = [
   {
     name: "Quarto 1",
-    key: "temp_0",
+    dbKey: "temp_0",
+    background:
+      "https://cdn.leroymerlin.com.br/contents/quarto_de_casal_cinza_com_parede_ripada_5541_original.jpg",
   },
   {
     name: "Quarto 2",
-    key: "temp_1",
+    dbKey: "temp_1",
+    background:
+      "https://cdn.leroymerlin.com.br/contents/quarto_de_casal_cinza_com_parede_ripada_5541_original.jpg",
   },
   {
     name: "Sala",
-    key: "temp_2",
+    dbKey: "temp_2",
+    background:
+      "https://finger.ind.br/wp-content/uploads/2023/06/veja-como-decorar-sua-sala-de-estar-com-moveis-planejados-4-1024x768.jpeg",
   },
   {
     name: "Cozinha",
-    key: "temp_3",
+    dbKey: "temp_3",
+    background:
+      "https://images.tcdn.com.br/img/img_prod/631328/cozinha_modulada_atena_100_mdf_13_pecas_grafite_arte_cas_3031_1_ae7f0b168504b898c50ec5a05c0da33e.jpeg",
   },
 ];
