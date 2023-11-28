@@ -1,3 +1,10 @@
+"use client";
+
+import React from "react";
+import { onValue } from "firebase/database";
+
+import { useDatabaseRef } from "../../hooks/useDatabaseRef";
+
 import styles from "./place.module.css";
 
 export interface IPlaceProps {
@@ -6,7 +13,16 @@ export interface IPlaceProps {
   background: string;
 }
 
-export const Place = ({ background, name }: IPlaceProps) => {
+export const Place = ({ background, name, dbKey }: IPlaceProps) => {
+  const placeTemperature = useDatabaseRef(dbKey);
+
+  React.useEffect(() => {
+    onValue(placeTemperature, (snapshot) => {
+      const data = snapshot.val();
+      console.log(data);
+    });
+  }, [placeTemperature]);
+
   return (
     <div
       id="quarto1"
