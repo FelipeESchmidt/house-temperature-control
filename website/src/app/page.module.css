@@ -6,3 +6,9 @@
   padding: 6rem;
   min-height: 100vh;
 }
+
+@media (max-width: 968px) {
+  .main {
+    padding: 2rem;
+  }
+}

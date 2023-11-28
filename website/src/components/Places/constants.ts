@@ -7,4 +7,12 @@ export const places = [
     name: "Quarto 2",
     key: "temp_1",
   },
+  {
+    name: "Sala",
+    key: "temp_2",
+  },
+  {
+    name: "Cozinha",
+    key: "temp_3",
+  },
 ];
