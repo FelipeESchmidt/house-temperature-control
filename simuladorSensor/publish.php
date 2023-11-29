@@ -36,6 +36,6 @@ function postMqtt($mqtt, $number)
 {
     $temperature = random_int(28, 32);
     $date = date("d/m/Y H:i:s");
-    $mqtt->publish('SensoresGURImc', "{ \"\": Sensor_$number, \"temperature\": $temperature, \"date\": \"$date\" }", 0, false);
-    echo "sending: { \"\": Sensor_$number, \"temperature\": $temperature, \"date\": \"$date\" }\n\n";
+    $mqtt->publish('SensoresGURImc', "{ \"\": \"Sensor_$number\", \"temperature\": $temperature, \"date\": \"$date\" }", 0, false);
+    echo "sending: { \"\": \"Sensor_$number\", \"temperature\": $temperature, \"date\": \"$date\" }\n\n";
 }
