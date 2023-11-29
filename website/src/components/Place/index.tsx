@@ -25,7 +25,7 @@ export const Place = ({ background, name, dbKey }: IPlaceProps) => {
 
   return (
     <div
-      id="quarto1"
+      id={dbKey}
       className={styles.place_single}
       style={{ backgroundImage: `url(${background})` }}
     >
