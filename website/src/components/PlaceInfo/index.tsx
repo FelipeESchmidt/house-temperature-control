@@ -8,8 +8,10 @@ import { parseTemperatures } from "@/utils/parseOrders";
 import { IPlaceProps } from "../Place";
 import styles from "./placeInfo.module.css";
 import { ITemperatureProps } from "../Place/types";
+import { useApi } from "@/hooks/useApi";
 
 export const PlaceInfo = ({ background, name, dbKey }: IPlaceProps) => {
+  const { postChangeAirState } = useApi();
   const [temperatures, setTemperatures] = useState<Array<ITemperatureProps>>(
     []
   );
@@ -46,6 +48,20 @@ export const PlaceInfo = ({ background, name, dbKey }: IPlaceProps) => {
             º
           </span>
         </div>
+      </div>
+      <div className={styles.buttons_container}>
+        <button
+          className={`${styles.button} ${styles.button_on}`}
+          onClick={() => postChangeAirState(true)}
+        >
+          Ligar
+        </button>
+        <button
+          className={`${styles.button} ${styles.button_off}`}
+          onClick={() => postChangeAirState(false)}
+        >
+          Desligar
+        </button>
       </div>
       <table className={styles["place-info-table"]}>
         <thead>
