@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@types/firebase": "^3.2.1",
+    "axios": "^1.6.2",
     "firebase": "^10.7.0",
+    "mqtt": "^5.3.3",
     "next": "13.5.5",
     "react": "^18",
     "react-dom": "^18"
