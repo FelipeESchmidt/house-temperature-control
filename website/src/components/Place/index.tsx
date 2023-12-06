@@ -26,7 +26,7 @@ export const Place = ({ background, name, dbKey }: IPlaceProps) => {
   React.useEffect(() => {
     onValue(placeTemperature, (snapshot) => {
       const data = snapshot.val();
-      setTemperatures(parseTemperatures(data));
+      setTemperatures(parseTemperatures(data).reverse());
     });
   }, [placeTemperature]);
 

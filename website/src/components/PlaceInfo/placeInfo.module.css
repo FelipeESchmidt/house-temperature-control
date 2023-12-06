@@ -1,0 +1,80 @@
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.place_single {
+  width: 100%;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 8px 0px #000;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.place_name {
+  text-shadow: 0px 0px 8px #000;
+  margin-bottom: 10px;
+}
+
+.place_temperature_container {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.place_temperature_container > span {
+  text-shadow: 0px 0px 8px #000;
+}
+
+.place-info-table {
+  border-collapse: collapse;
+  width: 100%;
+  color: #000;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.place-info-table th {
+  border: 2px solid rgba(109, 109, 109, 0.2);
+}
+
+.place-info-table th,
+.place-info-table td {
+  text-align: center;
+  padding: 12px 15px;
+}
+
+.place-info-table thead,
+.place-info-table tbody {
+  border: 2px solid rgba(109, 109, 109, 0.2);
+}
+
+.place-info-table tbody tr td:not(:last-child) {
+  border-right: 2px solid rgba(109, 109, 109, 0.2);
+}
+
+.place-info-table th {
+  font-weight: bold;
+}
+
+.place-info-table tr:nth-child(odd) {
+  background-color: #e0e0e0;
+}
