@@ -1,10 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { onValue } from "firebase/database";
+import { parseTemperatures } from "@/utils/parseOrders";
 
 import { useDatabaseRef } from "../../hooks/useDatabaseRef";
 
+import { ITemperatureProps } from "./types";
 import styles from "./place.module.css";
 
 export interface IPlaceProps {
@@ -14,12 +16,16 @@ export interface IPlaceProps {
 }
 
 export const Place = ({ background, name, dbKey }: IPlaceProps) => {
+  const [temperatures, setTemperatures] = useState<Array<ITemperatureProps>>(
+    []
+  );
+
   const placeTemperature = useDatabaseRef(dbKey);
 
   React.useEffect(() => {
     onValue(placeTemperature, (snapshot) => {
       const data = snapshot.val();
-      console.log(data);
+      setTemperatures(parseTemperatures(data));
     });
   }, [placeTemperature]);
 
@@ -32,7 +38,12 @@ export const Place = ({ background, name, dbKey }: IPlaceProps) => {
       <h2 className={styles.place_name}>{name}</h2>
 
       <div className={styles.place_temperature_container}>
-        <span>0º</span>
+        <span>
+          {!!temperatures && temperatures.length > 0
+            ? temperatures[0].temperature
+            : "--"}
+          º
+        </span>
       </div>
     </div>
   );
