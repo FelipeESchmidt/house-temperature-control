@@ -26,7 +26,7 @@ export const PlaceInfo = ({ background, name, dbKey }: IPlaceProps) => {
   }, [placeTemperature]);
 
   const getDate = (dateTime: string, type: string) => {
-    const [date, hour] = dateTime.split(" ");
+    const [date, hour] = dateTime.trim().split(" ");
     if (type === "date") return date;
     if (type === "hour") return hour;
   };
