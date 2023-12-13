@@ -52,13 +52,13 @@ export const PlaceInfo = ({ background, name, dbKey }: IPlaceProps) => {
       <div className={styles.buttons_container}>
         <button
           className={`${styles.button} ${styles.button_on}`}
-          onClick={() => postChangeAirState(true)}
+          onClick={() => postChangeAirState(dbKey, true)}
         >
           Ligar
         </button>
         <button
           className={`${styles.button} ${styles.button_off}`}
-          onClick={() => postChangeAirState(false)}
+          onClick={() => postChangeAirState(dbKey, false)}
         >
           Desligar
         </button>

@@ -18,9 +18,9 @@ const validateErrors = (req: NextApiRequest, res: NextApiResponse) => {
     return true;
   }
 
-  const { on } = req.body;
+  const { on, sensor } = req.body;
 
-  if (on === undefined || on === null) {
+  if (on === undefined || on === null || !sensor) {
     res.status(400).json({ error: "Invalid!" });
     return true;
   }
@@ -37,11 +37,13 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
     client = mqtt.connect(connectUrl);
 
-    const { on } = req.body;
+    const { sensor, on } = req.body;
 
-    mqttClient.publish("AresGURImc", `${on}`);
+    const message = { sensor, on };
 
-    res.status(200).json({ air: on });
+    mqttClient.publish("AresGURImc", JSON.stringify(message));
+
+    res.status(200).json({ [sensor]: on });
     res.end();
   } catch (error) {
     res.status(400).json({ error: `${error}` });

@@ -8,9 +8,9 @@ export const useApi = () => {
     api.defaults.baseURL = `${window.location.origin}/api`;
   }, []);
 
-  const postChangeAirState = async (on: boolean) => {
+  const postChangeAirState = async (sensor: string, on: boolean) => {
     return api
-      .post("/changeAirState", { on })
+      .post("/changeAirState", { sensor, on })
       .then(({ data }: { data: any }) => data);
   };
 
